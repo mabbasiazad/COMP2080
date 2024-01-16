@@ -16,6 +16,9 @@ public class Main {
         arr.listItems();
         // System.out.println(arr);
 
+        int index_found = arr.binarySearch(141);
+        System.out.println("index found: " + index_found);
+
         // arr.linearSearch(100);
         // arr.removeItem(100); 
         // System.out.println(arr);

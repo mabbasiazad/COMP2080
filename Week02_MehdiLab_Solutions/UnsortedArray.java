@@ -33,6 +33,29 @@ public class UnsortedArray {
         return -1; 
     }
 
+    public int binarySearch(int item) {
+        int start = 0;
+        int end = numElements -1;
+        while (start <= end) {
+            int mid = start + (end - start) / 2; 
+            System.out.println(mid);
+            if (m_array[mid] == item) {
+                return mid;
+            }
+
+            else if (item > m_array[mid] ) {
+                start = mid + 1;
+            }
+
+            else if (item < m_array[mid]  ) {
+                end = mid - 1;
+            }
+            
+        }
+
+        return -1;
+    }
+
     boolean removeItem(int item) {
 
         int index = linearSearch(item);
