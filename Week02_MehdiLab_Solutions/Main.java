@@ -11,8 +11,8 @@ public class Main {
         for (int i = 0; i < 50; i++)  arr.addLast(rand.nextInt(300));
         arr.listItems();
 
-        arr.removeItem(184);
-        System.out.println("you have removed one item with removeItem method");
+        arr.efficientRemoveItem(184);
+        System.out.println("you have removed one item with efficientRemoveItem method");
         arr.listItems();
         // System.out.println(arr);
 
