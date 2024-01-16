@@ -16,6 +16,9 @@ public class Main {
         arr.listItems();
         // System.out.println(arr);
 
+        arr.selectionSort();
+        System.err.println("Sorted list for binary search");
+        arr.listItems();
         int index_found = arr.binarySearch(141);
         System.out.println("index found: " + index_found);
 

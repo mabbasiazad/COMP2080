@@ -33,6 +33,16 @@ public class UnsortedArray {
         return -1; 
     }
 
+    public int BinarySearch(int item) {
+        /*
+         * Returns the location of the first occurrence of item 
+            in the array of found and -1 if not found.
+         */
+
+        //you code here 
+        return -1;
+    }
+    
     boolean removeItem(int item) {
 
         int index = linearSearch(item);
@@ -82,6 +92,10 @@ public class UnsortedArray {
             m_array[i] = temp;   
             }    
         }
+
+    public void insertionSortAsc() {
+        //your code here
+    }
     
     public void listItems() {
         //writ you code here

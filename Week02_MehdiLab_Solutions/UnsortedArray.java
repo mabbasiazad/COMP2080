@@ -38,7 +38,6 @@ public class UnsortedArray {
         int end = numElements -1;
         while (start <= end) {
             int mid = start + (end - start) / 2; 
-            System.out.println(mid);
             if (m_array[mid] == item) {
                 return mid;
             }
