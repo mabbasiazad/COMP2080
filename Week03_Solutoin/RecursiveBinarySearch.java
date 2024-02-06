@@ -2,7 +2,7 @@ public class RecursiveBinarySearch {
     public static void main(String[] args) {
         // Example usage:
         //int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        Employee[] employees = new Employee[4]; 
+        Employee[] employees = new Employee[4 ]; 
 
         Employee employee_0 = new Employee(123);
         Employee employee_1 = new Employee(2354);
@@ -10,7 +10,7 @@ public class RecursiveBinarySearch {
         employees[0] = employee_0;
         employees[1] = employee_1;
         
-        int key_id = 2354;
+        int key_id = 123;
         int result = recursiveBinarySearch(employees, key_id);
 
         if (result != -1) {
