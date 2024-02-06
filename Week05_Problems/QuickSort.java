@@ -8,9 +8,7 @@ public class QuickSort {
 
     private static void quickSort(int[] array, int lowIndex, int highIndex){
         //define base condition
-        if (lowIndex > highIndex) {
-            return;
-        }
+
         int pivot = array[highIndex]; 
         
         //start partitioning
