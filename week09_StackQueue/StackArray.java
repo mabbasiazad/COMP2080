@@ -28,7 +28,30 @@ import java.util.Arrays;
     }
 
     public String pop() {
-        
+        if (topOfStack >= 0) {
+            //displayStack();
+            String poppedElem = stackArray[topOfStack]; 
+            System.out.println("POP " + poppedElem + " was removed form the stack");
+            stackArray[topOfStack] = "-1";
+            topOfStack--;
+            return poppedElem;
+        }
+        else{
+            System.out.println("The stack is empty");
+            return "-1"; 
+        }
+
+    }
+
+    //enters more than one element to the stack
+    public void pushMany(String multipleValues) {
+        //enter your code here
+
+    }
+
+    //remove all elements of the stack
+    public void popAll(){
+
     }
     
     public void displayStack() {
@@ -63,11 +86,17 @@ import java.util.Arrays;
 
     public static void main(String[] args) {
         StackArray stackobj = new StackArray(10);
+        stackobj.push("10");
+        stackobj.push("15");
+        stackobj.push("160");
         stackobj.displayStack();
-        stackobj.push("aaa");
+        stackobj.pop();
         stackobj.displayStack();
-        stackobj.push("bbb");
+
+        stackobj.pop();
         stackobj.displayStack();
+
+        stackobj.pushMany("15 78 45 78");
 
     }
     
