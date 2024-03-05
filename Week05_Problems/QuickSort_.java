@@ -1,41 +1,36 @@
 import java.util.Random;
 
-public class QuickSort {
+public class QuickSort_ {
 
     private static void quickSort(int[] array){
         quickSort(array, 0 , array.length - 1);
     }
 
     private static void quickSort(int[] array, int lowIndex, int highIndex){
-        //define base condition
-        if(lowIndex > highIndex) {
+        if (lowIndex > highIndex) {
             return;
         }
         int pivot = array[highIndex]; 
-        //System.out.println(pivot);
+        //start partitioning
         int leftPointer = lowIndex; 
-        int rightPointer = highIndex; 
-
+        int rightPointer = highIndex;
         while (leftPointer < rightPointer) {
-            while (array[leftPointer] <= pivot && leftPointer < rightPointer) {
+            while (array[leftPointer] <= pivot && leftPointer < rightPointer ) {
                 leftPointer++;                
             }
 
             while (array[rightPointer] >= pivot && leftPointer < rightPointer) {
-               rightPointer--; 
+                rightPointer--;    
             }
 
-            swap(array, leftPointer, rightPointer); 
-      
-        }
+            swap(array, leftPointer, rightPointer);            
+        } 
 
         swap(array, leftPointer, highIndex);
 
-
-        //recursive call of left and right subarray sort
+        //stop partitioning
 
         quickSort(array, lowIndex, leftPointer - 1);
-
         quickSort(array, leftPointer + 1, highIndex);
     }
 
@@ -54,18 +49,18 @@ public class QuickSort {
     }
     public static void main(String[] args) {
         Random rnd = new Random();
-        int[] numbers = new int[5];
+        int[] numbers = new int[1000000];
 
         for (int i = 0; i < numbers.length; i++) {
            numbers[i] = rnd.nextInt(100); 
         }
 
         System.out.print("Original Array: ");
-        printArray(numbers);
+        //printArray(numbers);
 
         quickSort(numbers);
         System.out.print("Sorted Array: ");
-        printArray(numbers);
+        //printArray(numbers);
 
     }
 }
